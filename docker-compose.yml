@@ -1,0 +1,9 @@
+version: "3"
+services:
+  php:
+    build: ./docker/build/php
+    restart: always
+    ports:
+      - "${APP_HTTP_PORT}:80"
+    volumes:
+      - ./:/var/www/html:cached
